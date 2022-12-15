@@ -1,9 +1,9 @@
 /* Basic style */
 :root {
-  --primary: #fff;
+  --primary: #7b8ceb;
   --secondary: #050840;
-  --highlight-primary: #7ce7c9;
-  --highlight-secondary: #9d7beb;
+  --highlight-primary: rgb(235, 51, 82);
+  --highlight-secondary: #7b8ceb;
   --radius: 0.5rem;
   --pill: 2rem;
   --line: 0.1rem;
@@ -37,45 +37,227 @@ a:hover {
   border-color: var(--primary);
 }
 
-/* UI Event Classes */
+/* Jouw animaties */
+/* Animatie #1 */
 
-/* Jump animation on the interaction link */
-a:nth-of-type(12) {
-  position: relative;
-  background: var(--highlight-secondary);
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.jump {
-  animation-name: jump;
+.vergroten {
+  animation-name: vergroten;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 1.2s;
   animation-iteration-count: 1;
 }
 
-@keyframes jump {
+@keyframes vergroten {
   0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-5rem) rotate(10deg);
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.05, 0.95) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-0.5rem) rotate(-2deg);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
+    transform: scale(1.15);
   }
   100% {
-    transform: scale(1, 1) translateY(0);
+    transform: scale(1);
   }
 }
 
-/* Jouw animaties */
+/* Animatie #2 */
+
+.ondersteboven {
+  animation-name: ondersteboven;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes ondersteboven {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Animatie #3 */
+
+.schuiven {
+  animation-name: schuiven;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes schuiven {
+  0% {
+    transform: translateY(0em);
+  }
+  50% {
+    transform: translateY(-1em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+
+/* Animatie #4 */
+
+.draaien {
+  animation-name: draaien;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 4.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes draaien {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Animatie #5 */
+
+.kleiner {
+  animation-name: kleiner;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2.2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes kleiner {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.8);
+  }
+  66% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animatie #6 */
+
+.onzichtbaar {
+  animation-name: onzichtbaar;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.6s;
+  animation-iteration-count: 1;
+}
+
+@keyframes onzichtbaar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animatie #7 */
+
+.kleuren {
+  animation-name: kleuren;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2.6s;
+  animation-iteration-count: 1;
+}
+
+@keyframes kleuren {
+  0% {
+    color: red;
+    border-color: red;
+  }
+  33% {
+    color: pink;
+    border-color: pink;
+  }
+  66% {
+    color: purple;
+    border-color: purple;
+  }
+  100% {
+    color: red;
+    border-color: red;
+  }
+}
+
+/* Animatie #8 */
+
+.trillen {
+  animation-name: trillen;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: .2s;
+  animation-iteration-count: 10;
+}
+
+@keyframes trillen {
+  0% {
+    transform: translateX(0em);
+  }
+  50% {
+    transform: translateX(-.2em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+/* Animatie #9 */
+
+.vliegen {
+  animation-name: vliegen;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+@keyframes vliegen {
+  0% {
+    transform: translateX(0em);
+  }
+  25%{
+    transform: translateX(40em);
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-60em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0em);
+  }
+}
+
+/* Animatie #10 */
+
+.omvallen {
+  animation-name: omvallen;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.6s;
+  animation-iteration-count: 1;
+}
+
+@keyframes omvallen {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
